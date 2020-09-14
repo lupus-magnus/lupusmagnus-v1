@@ -3,7 +3,7 @@ $(document).ready(function(){
     //Progress bar
     let containerA = document.getElementById("circleA");
     let circleA = new ProgressBar.Circle(containerA, { 
-        color: '#353D41',
+        color: '#FFF',
         strokeWidth: 7,
         duration: 1400,
         from: {color:'#444'},
@@ -20,7 +20,7 @@ $(document).ready(function(){
     
     let containerB = document.getElementById("circleB");
     let circleB = new ProgressBar.Circle(containerB, { 
-        color: '#353D41',
+        color: '#FFF',
         strokeWidth: 7,
         duration: 1600,
         from: {color:'#444'},
@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
     let containerC = document.getElementById("circleC");
     let circleC = new ProgressBar.Circle(containerC, { 
-        color: '#353D41',
+        color: '#FFF',
         strokeWidth: 7,
         duration: 2000,
         from: {color:'#444'},
@@ -50,10 +50,30 @@ $(document).ready(function(){
       
         }
     });
+    //Iniciando o loader quando o usuário chegar lá
 
-    circleA.animate(1.0);
-    circleB.animate(1.0);
-    circleC.animate(1.0);
+    let dataAreaOffset = $('#data-area').offset();
+    let stop = 0;
+
+    $(window).scroll(function(e){
+        let scroll = $(window).scrollTop();
+
+        if(scroll > (dataAreaOffset.top - 500)&& stop == 0){
+
+            circleA.animate(1.0);
+            circleB.animate(1.0);
+            circleC.animate(1.0);
+
+            stop = 1;
+        }
+    });
+
+    //Parallax
+    setTimeout(function(){
+
+        $('#data-area').parallax({imageSrc:'imgs/coding.jpg'})
+
+    },250);
 
 });
 
