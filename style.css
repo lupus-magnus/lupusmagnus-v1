@@ -208,3 +208,51 @@ header, .navbar {
 .card-body{
     min-height:290px;
 }
+
+/*responsividade*/
+
+@media(max-width: 768px){
+    /*geral*/
+    .container{
+        padding: 20px 0;
+    }
+
+    /*slider*/
+    #mainSlider .carousel-inner, #mainSlider .carousel-item{
+        height: auto;
+    }
+    
+    #mainSlider .carousel-caption h2{
+        font-size: 28px;
+    }
+
+    #mainSlider .carousel-caption p{
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    /* about */
+    #about-area img{
+        margin-top: 100px;
+    }
+    /* data */
+    #data-area p{
+        font-size: 14px;
+    }
+    #data-area{
+        margin-bottom: 50px;
+    }
+
+    /*cards*/
+    .card-title{
+        font-size: 14px;
+    }
+    .card-body{
+        min-height: 415px;
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+}
