@@ -1,7 +1,6 @@
 # Projeto de Site Pessoal
 <!-- Nested paragraph -->
-    O presente repositório foi usado para praticar o domínio do Bootstrap,
-    de forma a melhor entender seu funcionamento.
+O presente repositório foi usado para praticar o domínio do Bootstrap, de forma a melhor entender seu funcionamento.
 
 A presente lista conta com:
 <!-- ul -->
